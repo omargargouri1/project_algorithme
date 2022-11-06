@@ -1,0 +1,25 @@
+ALGORITHM diff1
+VAR
+arr1,arr2:ARRAY_OF INTEGER;
+sum,i,n,m:INTEGER;
+Found:BOOLEAN
+    
+BEGIN
+sum:=0;
+n:=arr1.length-1;
+m:=arr2.length-1;
+FOR i FROM 0 TO n STEP 1  DO
+   Found:=False;
+FOR j FROM 0 TO m STEP 1  DO
+    IF(arr1[i]=arr2[j])THEN
+    sum:=sum+arr1[i]*2
+    BRAEK
+END_IF
+END_FOR
+IF(Found=False) THEN
+Found:=True;
+    
+END_IF
+END_FOR
+   Write(sum)
+END 
